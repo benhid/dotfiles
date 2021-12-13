@@ -26,6 +26,10 @@ setup_ssh() {
 
   # generate Bitbucket key pair
   try_generate_keypair bitbucket
+
+  step "Copying SSH config..."
+  
+  copy ssh/config "$HOME/.ssh/config"
 }
 
 if has_cmd 'ssh-keygen'; then
