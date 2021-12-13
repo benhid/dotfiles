@@ -1,0 +1,16 @@
+# bat (cat replacement)
+alias cat="bat --theme GitHub --style='numbers,changes'"
+
+# peco (history replacement)
+alias history="history 0 | peco"
+
+# show public ip
+if test -n "$(command -v curl)"; then
+  alias myip="curl eth0.me"
+elif test -n "$(command -v nc)"; then
+  alias myip="echo GET / | nc eth0.me 80"
+else
+  myip() {
+    echo "Error: 'curl' or 'nc' is not installed. Try browsing eth0.me manully."
+  }
+fi

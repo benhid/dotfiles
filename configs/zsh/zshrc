@@ -1,0 +1,11 @@
+if test -n "$(command -v starship)"; then
+  USE_STARSHIP=true
+else
+  USE_STARSHIP=false
+fi
+
+if $USE_STARSHIP; then
+  eval "$(starship init zsh)"
+fi
+
+. ~/.dots/configs/zsh/aliases

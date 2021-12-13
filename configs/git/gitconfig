@@ -1,0 +1,6 @@
+[core]
+excludesfile = ~/.dots/configs/git/gitignore
+
+[user]
+name = benhid
+email = antoniobenitezhid@gmail.com
