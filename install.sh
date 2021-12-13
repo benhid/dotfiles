@@ -80,10 +80,12 @@ has_cmd() {
 # Main
 #===========================
 
-_main() {
+main() {
   if ! test -d "$HOME/.dots"; then
-    error "Local copy of dotfiles is not found at $HOME/.dots"
-    quit 1
+    warn "Local copy of dotfiles is not found at $HOME/.dots"
+    info "Installing dotfiles for the first time"
+    git clone --depth=1 https://github.com/benhid/dotfiles.git "$HOME/.dots"
+    cd "$HOME/.dots"
   fi
 
   step "Installing Brew Packages..."
@@ -103,6 +105,8 @@ _main() {
     step "  - $name"
     . "$try_run_install__setup_path"
   done
+
+  quit
 }
 
-_main
+main
