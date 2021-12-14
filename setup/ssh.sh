@@ -5,7 +5,7 @@ set -e
 try_generate_keypair() {
   try_generate_keypair__path="$HOME/.ssh/$1.id_rsa"
   if test -f "$try_generate_keypair__path"; then
-    warn "SSH keypair for $1 is already exists"
+    warn "SSH keypair for $1 already exists"
   else
     step "Generating SSH keypair for $1..."
     ssh-keygen -b 2048 -t rsa -f "$try_generate_keypair__path" -q -N ""

@@ -13,6 +13,7 @@ setup_config() {
 
   step "  - zsh"
   copy zsh/zshrc "$HOME/.zshrc"
+  copy zsh/zprofile "$HOME/.zprofile"
 }
 
 setup_config

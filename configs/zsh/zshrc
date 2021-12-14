@@ -18,3 +18,5 @@ fi
 if $USE_STARSHIP; then
   eval "$(starship init zsh)"
 fi
+
+eval "$(pyenv init -)"
