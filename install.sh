@@ -27,6 +27,7 @@ fi
 # Utilities Functions
 #===========================
 
+# shellcheck disable=SC2120
 quit() {
   if test -z "$1"; then
     exit
