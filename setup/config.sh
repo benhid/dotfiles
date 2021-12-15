@@ -10,6 +10,12 @@ setup_config() {
 
   #step "  - starship"
   #copy starship/starship.toml "$HOME/.config/starship.toml"
+  
+  step "  - neofetch"
+  copy neofetch/config.conf "$HOME/.config/neofetch/config.conf"
+
+  step "  - pypoetry"
+  copy pypoetry/config.toml "$HOME/Library/Application Support/pypoetry/config.toml"
 
   step "  - zsh"
   copy zsh/zshrc "$HOME/.zshrc"

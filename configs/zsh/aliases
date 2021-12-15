@@ -13,6 +13,9 @@ alias serve='python3 -m http.server 9000'
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
+# neofetch
+alias me='neofetch'
+
 # show public ip
 if test -n "$(command -v curl)"; then
   alias myip="curl eth0.me"
