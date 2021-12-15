@@ -86,8 +86,10 @@ main() {
     warn "Local copy of dotfiles is not found at $HOME/.dots"
     info "Installing dotfiles for the first time"
     git clone --depth=1 https://github.com/benhid/dotfiles.git "$HOME/.dots"
-    cd "$HOME/.dots"
   fi
+
+  #  Make sure we are in the right directory
+  cd "$HOME/.dots"
 
   step "Installing Brew Packages..."
 
@@ -106,6 +108,8 @@ main() {
     step "  - $name"
     . "$try_run_install__setup_path"
   done
+
+  info "Done"
 
   quit
 }

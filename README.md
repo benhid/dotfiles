@@ -4,9 +4,11 @@ Modular dotfiles for my personal setup.
 
 ## Installation
 
+* [Install Homebrew](https://docs.brew.sh/Installation)
 * Download dotfiles:
    ```sh
     git clone git@github.com:benhid/dotfiles.git
+    cd dotfiles
    ```
 * Make the script executable:
    ```sh
@@ -16,3 +18,15 @@ Modular dotfiles for my personal setup.
    ```sh
    ./install.sh
    ```
+
+Alternatively, you can use curl or wget to download the script and run it:
+* Run the script:
+   ```sh
+   curl -fsSL https://raw.githubusercontent.com/benhid/dotfiles/master/install.sh | bash
+   ```
+
+# Next Steps
+
+Not covered in this repo:
+
+* [Install Docker and docker-compose](https://docs.docker.com/desktop/mac/install/)
