@@ -25,8 +25,9 @@ Alternatively, you can use curl or wget to download the script and run it:
    curl -fsSL https://raw.githubusercontent.com/benhid/dotfiles/master/install.sh | bash
    ```
 
-# Next Steps
+## Next Steps
 
-Not covered in this repo:
+Not covered in this repo (yet?):
 
+* [Apply the Dracula theme to the MacOS terminal](https://draculatheme.com)
 * [Install Docker and docker-compose](https://docs.docker.com/desktop/mac/install/)
