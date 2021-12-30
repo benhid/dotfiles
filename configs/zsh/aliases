@@ -1,5 +1,11 @@
 # bat (cat replacement)
-alias cat="bat --theme GitHub --style='numbers,changes'"
+alias cat="bat --style='numbers,changes'"
+
+# exa (ls replacement)
+alias ls="exa"
+alias tree="exa --tree --level=2"
+alias tree2="exa --tree --level=3"
+alias tree3="exa --tree --level=3"
 
 # peco (history replacement)
 alias history="history 0 | peco"
