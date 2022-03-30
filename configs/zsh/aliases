@@ -16,6 +16,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo 'Public key copied to paste
 # serve the current directory as HTTP
 alias serve='python3 -m http.server 9000'
 
+# notify exit
+alias notify="osascript -e 'display notification \"Exit\" with title \"Done\"'"
+
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
