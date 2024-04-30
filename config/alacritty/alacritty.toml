@@ -1,0 +1,22 @@
+import = ["~/.config/alacritty/themes/rose_pine.toml"]
+
+[shell]
+program = "/bin/zsh"
+
+[font]
+size = 14.0
+normal = { family = "Hack", style = "Regular" }
+
+[keyboard]
+bindings = [
+    # tmux
+    { key = "S", mods = "Command", chars = "\u0002\u0073" },       # list sessions
+    { key = "D", mods = "Command", chars = "\u0002\u0064" },       # detach from session
+    { key = "R", mods = "Command", chars = "\u0002\u0024" },       # rename session
+    { key = "T", mods = "Command", chars = "\u0002\u0063" },       # new window
+    { key = "W", mods = "Command", chars = "\u0002\u0026" },       # close current window
+    { key = "L", mods = "Command", chars = "\u0002\u0077" },       # list windows
+    { key = "H", mods = "Command|Shift", chars = "\u0002\u0025" }, # split pane horizontal
+    { key = "V", mods = "Command|Shift", chars = "\u0002\u0022" }, # split pane horizontal
+    { key = "W", mods = "Command|Shift", chars = "\u0002\u0078" }, # close current pane
+]

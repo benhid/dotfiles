@@ -1,33 +1,34 @@
-[![MacOS Test](https://github.com/benhid/dotfiles/actions/workflows/macos-test.yml/badge.svg)](https://github.com/benhid/dotfiles/actions/workflows/macos-test.yml)
+## Overview
 
-Modular dotfiles for my personal setup.
+My personal setup is based on:
+
+- ZSH
+- [Alacritty](https://alacritty.org)
+- [Starship](https://starship.rs/)
+- [Helix editor](https://helix-editor.com/)
+- [Tmux](https://github.com/tmux/tmux)
+- Hack Nerd Font
+
+Additionally, I make use of several fancy tools such as:
+
+- [jq](https://github.com/jqlang/jq)
+- [bat](https://github.com/sharkdp/bat)
+- [fzf](https://github.com/junegunn/fzf)
+- [dust](https://github.com/bootandy/dust)
+- [lazygit](https://github.com/jesseduffield/lazygit)
 
 ## Installation
 
-* [Install Homebrew](https://docs.brew.sh/Installation)
-* Download dotfiles:
-   ```sh
-    git clone git@github.com:benhid/dotfiles.git
-    cd dotfiles
-   ```
-* Make the script executable:
-   ```sh
-   chmod +x ./install.sh
-   ```
-* Run the script:
-   ```sh
-   ./install.sh
-   ```
+Most of these tools are available via Homebrew, so you can install them from there.
 
-Alternatively, you can use curl or wget to download the script and run it:
-* Run the script:
-   ```sh
-   curl -fsSL https://raw.githubusercontent.com/benhid/dotfiles/master/install.sh | bash
-   ```
+For the fonts, you can download them from the [Nerd Fonts repository](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack) and install them manually.
 
-## Next Steps
+Install with:
 
-Not covered in this repo (yet?):
-
-* [Apply the Dracula theme to the MacOS terminal](https://draculatheme.com)
-* [Install Docker and docker-compose](https://docs.docker.com/desktop/mac/install/)
+```bash
+git clone https://github.com/benhid/dotfiles.git
+cd dotfiles
+mkdir -p ~/.config/
+cp -r config/* ~/.config/
+cp -r zsh/. ~/
+```

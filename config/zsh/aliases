@@ -1,0 +1,34 @@
+# Homebrew
+alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# tmux shortcuts
+alias ta='tmux attach -t'
+alias tn='tmux new-session -d -t'
+alias tl='tmux list-sessions'
+alias tk='tmux kill-session -t'
+
+# recording SSH session
+function _ssh_sesslog() {
+  _sesdir="$HOME/.ssh_logs"
+
+  mkdir -p "${_sesdir}" && \
+  ssh $@ 2>&1 | tee -a "${_sesdir}/$(date +%Y%m%d).log"
+}
+alias ssh='_ssh_sesslog'
+
+# bat (cat replacement)
+alias cat="bat --style='numbers,changes'"
+
+# notepad
+alias notes='find $HOME/.config/notes -type f -print 2>/dev/null | fzf --reverse --preview="bat {}" --preview-window=right:70%:wrap --margin=1 --padding=1 --bind "enter:become(hx {})"'
+
+# show public ip
+if test -n "$(command -v curl)"; then
+  alias myip="curl eth0.me"
+elif test -n "$(command -v nc)"; then
+  alias myip="echo GET / | nc eth0.me 80"
+else
+  myip() {
+    echo "Error: 'curl' or 'nc' is not installed. Try browsing eth0.me manully."
+  }
+fi
