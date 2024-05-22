@@ -10,8 +10,9 @@ if [ -f ~/.config/zsh/aliases ]; then
 fi
 
 # attach to an ongoing tmux session or start a new one
+# (with the exception of some IDEs, which doesn't play well with tmux)
 # *https://wiki.archlinux.org/title/Tmux#Start_tmux_on_every_shell_login
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z "${ZED_TERM}" ] && [ -z "${INTELLIJ_ENVIRONMENT_READER}" ]; then
     exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
 
