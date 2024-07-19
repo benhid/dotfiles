@@ -43,9 +43,7 @@ add_to_path "/usr/local/sbin"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Go development
-export GOPATH="$HOME/go";
 add_to_path "/usr/local/go/bin";
-add_to_path "$GOPATH/bin";
 
 # Rust development
 add_to_path "$HOME/.cargo/bin";
